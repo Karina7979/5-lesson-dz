@@ -30,7 +30,7 @@ const app = new Vue({
         this.getJson(`${API + this.catalogUrl}`)
             .then(data => {
                 for (let el of data) {
-                    this.products.push(el);
+                    this.filtered.push(el);
                 }
             });
         this.getJson(`getProducts.json`)
@@ -39,5 +39,6 @@ const app = new Vue({
                     this.products.push(el);
                 }
             })
+
     }
 })
